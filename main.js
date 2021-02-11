@@ -18,9 +18,10 @@ checkBox.addEventListener("change", function() {
     }
 });
 
-const colorPicker = document.querySelector("#color-picker");
+const changeColor = document.getElementById("change-color");
 
-function bgColorChange() {
-    document.body.style.backgroundColor = colorPicker.value;
+function colorChange() {
+    document.body.style.backgroundColor = changeColor.value;
 }
-colorPicker.addEventListener("change", bgColorChange);
+// possibilité d'utiliser input à la place de change, c'est plus pratique 
+changeColor.addEventListener("input", colorChange);
